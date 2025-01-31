@@ -1,0 +1,40 @@
+body{
+    background: #FEAE97;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+}
+.container img {
+    width: 80px;
+    height: 300px;
+    object-fit:cover; 
+    border-radius: 20px;
+    transition: .3s ease-in-out;
+}
+.container img:hover {
+    width: 400px;
+} 
+
+@media (max-width: 481px) {
+.container {
+   display: flex;
+   overflow-x: auto;
+   scroll-snap-type: x mandatory;
+   width: 100vw; 
+   padding: 0 1rem;
+ } 
+ .container img {
+   width: 100vw;
+   scroll-snap-align: center;
+ }
+
+}
+ 
