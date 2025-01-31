@@ -13,12 +13,12 @@ img{
     object-fit: cover;
 }
 .container{
-    width: 200px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     position: relative;
     transform-style: preserve-3d;
     transform: perspective(1000px);
-     
+    animation: gallery 20s linear infinite;
     cursor: pointer;
 }
 .container span {
