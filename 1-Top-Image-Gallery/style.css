@@ -1,5 +1,5 @@
  body{
-    background: #b9c1cd;
+    background: #fdfefe;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,11 +7,6 @@
     overflow: hidden;
 }
 
-img{
-    height: 100%;
-    width: 100%; 
-    object-fit: cover;
-}
 .container{
     width: 250px;
     height: 250px;
@@ -21,17 +16,31 @@ img{
     animation: gallery 20s linear infinite;
     cursor: pointer;
 }
+
+.container:hover{
+    animation-play-state: paused;
+}
+
 .container span {
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
-    border: 6px solid #ccc;
-    overflow: hidden;
     transform-style: preserve-3d;
     transform: rotateY(calc(var(--i)*45deg)) translateZ(500px);
+    -webkit-box-reflect: below 2px linear-gradient(transparent,transparent,rgba(4,4,4,0.267));
 }
 
+img{
+    height: 100%;
+    width: 100%; 
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+img:hover{
+  height: 280px;
+  transform: translateY(-15px);
+}
 @keyframes gallery {
     0%{
         transform: perspective(1000px) rotateY(0deg);
